@@ -117,8 +117,12 @@ function esperar(ms) {
   return new Promise((r) => setTimeout(r, ms));
 }
 
-// ---------- 1. widetable.asp: tabla total + split local/visita ----------
-// Columnas confirmadas: # Team GP W D L GF GA GD Pts PPG Wh Dh Lh GFh GAh PPGh PPGa Wa Da La GFa GAa
+// ---------- 1. Tabla ancha con desglose casa/fuera (widetable.asp) ----------
+// En vez de asumir una posición fija de columna (que varía entre ligas y
+// causaba lecturas erróneas, como PPG mostrando "18" en vez de un valor
+// entre 0 y 3), esta versión lee primero la fila de encabezado real de la
+// tabla y busca cada columna por su nombre exacto (GP, W, D, L, PPGh, etc.),
+// sin importar en qué posición esté en cada liga.
 function parsearWidetable($) {
   const equipos = {};
 
@@ -127,23 +131,43 @@ function parsearWidetable($) {
     const headerTexto = $tabla.text();
     if (!headerTexto.includes('PPGh') || !headerTexto.includes('PPGa')) return;
 
+    let indices = null;
+
     $tabla.find('tr').each((__, fila) => {
-      const celdas = $(fila).children('td');
-      if (celdas.length < 20) return;
+      const celdas = $(fila).children('td, th');
+      if (celdas.length < 15) return;
       const t = celdas.map((___, td) => $(td).text().trim()).get();
 
-      const nombreEquipo = t[1];
-      const gp = num(t[2]);
+      // La fila de encabezado es la que trae literalmente las etiquetas de columna
+      if (!indices) {
+        if (t.includes('PPGh') && t.includes('PPGa')) {
+          indices = {};
+          t.forEach((texto, i) => {
+            if (!(texto in indices)) indices[texto] = i; // primera columna con ese nombre exacto
+          });
+        }
+        return; // esta fila es el encabezado, no un equipo — pasa a la siguiente
+      }
+
+      const iTeam = indices['Team'] ?? 1;
+      const iGP = indices['GP'];
+      if (iGP === undefined) return;
+
+      const nombreEquipo = t[iTeam];
+      const gp = num(t[iGP]);
       if (!nombreEquipo || !gp) return;
 
       equipos[normalizar(nombreEquipo)] = {
         nombreOriginal: nombreEquipo,
-        gp, w: num(t[3]), d: num(t[4]), l: num(t[5]),
-        gf: num(t[6]), ga: num(t[7]), pts: num(t[9]), ppg: num(t[10]),
-        wh: num(t[11]), dh: num(t[12]), lh: num(t[13]),
-        gfh: num(t[14]), gah: num(t[15]), ppgh: num(t[16]),
-        ppga: num(t[17]), wa: num(t[18]), da: num(t[19]), la: num(t[20]),
-        gfa: num(t[21]), gaa: num(t[22]),
+        gp,
+        w: num(t[indices['W']]), d: num(t[indices['D']]), l: num(t[indices['L']]),
+        gf: num(t[indices['GF']]), ga: num(t[indices['GA']]),
+        pts: num(t[indices['Pts']]), ppg: num(t[indices['PPG']]),
+        wh: num(t[indices['Wh']]), dh: num(t[indices['Dh']]), lh: num(t[indices['Lh']]),
+        gfh: num(t[indices['GFh']]), gah: num(t[indices['GAh']]),
+        ppgh: num(t[indices['PPGh']]), ppga: num(t[indices['PPGa']]),
+        wa: num(t[indices['Wa']]), da: num(t[indices['Da']]), la: num(t[indices['La']]),
+        gfa: num(t[indices['GFa']]), gaa: num(t[indices['GAa']]),
       };
     });
   });
