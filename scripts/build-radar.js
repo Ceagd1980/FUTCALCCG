@@ -32,6 +32,16 @@ function promedio(...valores) {
   return Math.round((validos.reduce((a, b) => a + b, 0) / validos.length) * 10) / 10;
 }
 
+// Respaldo: si SoccerStats no trae el PPG ya calculado con esa etiqueta
+// exacta para alguna liga, lo calculamos nosotros con la fórmula estándar
+// (ganados×3 + empatados×1) / partidos jugados — así nunca queda en blanco
+// aunque falte la columna con ese nombre exacto en el sitio.
+function calcularPPG(w, d, l) {
+  const gp = (w || 0) + (d || 0) + (l || 0);
+  if (!gp) return null;
+  return Math.round((((w || 0) * 3 + (d || 0)) / gp) * 100) / 100;
+}
+
 /**
  * Fórmula 1X2 "L/V", usando el desglose de LOCAL-EN-CASA y VISITA-FUERA de
  * widetable.asp (Wh/Dh/Lh del equipo local, Wa/Da/La del equipo visita):
@@ -156,10 +166,10 @@ function analizarPartido(partido, equipos, liga, slug) {
       visita: visita ? `${visita.rachaTipo || '-'}${visita.rachaLongitud || ''}` : null,
     },
     ppg: {
-      localGeneral: local?.ppg ?? null,
-      localCasa: local?.ppgh ?? null,
-      visitaGeneral: visita?.ppg ?? null,
-      visitaFuera: visita?.ppga ?? null,
+      localGeneral: local?.ppg ?? calcularPPG(local?.w, local?.d, local?.l),
+      localCasa: local?.ppgh ?? calcularPPG(local?.wh, local?.dh, local?.lh),
+      visitaGeneral: visita?.ppg ?? calcularPPG(visita?.w, visita?.d, visita?.l),
+      visitaFuera: visita?.ppga ?? calcularPPG(visita?.wa, visita?.da, visita?.la),
     },
     cumple,
     destacado,
