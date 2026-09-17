@@ -1,9 +1,9 @@
 {
-  "generadoEn": "2026-09-17T13:25:25.098Z",
+  "generadoEn": "2026-09-17T23:02:10.166Z",
   "fechaObjetivo": "2026-09-18",
-  "fuenteDatos": "2026-09-17T13:25:23.403Z",
-  "totalPartidos": 158,
-  "destacados": 50,
+  "fuenteDatos": "2026-09-17T23:02:08.681Z",
+  "totalPartidos": 149,
+  "destacados": 44,
   "partidos": [
     {
       "liga": "Albania - Abissnet Superiore",
@@ -654,52 +654,9 @@
       "liga": "Bosnia and Herzegovina - Premier Liga",
       "region": "Bosnia",
       "ligaSlug": "bosnia",
-      "equipoLocal": "FK Sarajevo",
-      "equipoVisita": "Sloga Doboj",
-      "horaInicio": "2026-09-19T01:00:00.000Z",
-      "equipoFavorito": "FK Sarajevo",
-      "probabilidades": {
-        "ganadorLocal": 37.5,
-        "empate": 25,
-        "ganadorVisita": 37.5,
-        "generalLocal": 30.8,
-        "generalEmpate": 30.8,
-        "generalVisita": 38.5,
-        "ganadorSimpleLocal": 42.9,
-        "ganadorSimpleVisita": 33.3,
-        "ganadorCasaLocal": 50,
-        "ganadorFueraVisita": 50,
-        "btts": 0,
-        "over15": 0,
-        "over25": 0
-      },
-      "rachas": {
-        "local": "-",
-        "visita": "-"
-      },
-      "ppg": {
-        "localGeneral": 1.43,
-        "localCasa": 1.75,
-        "visitaGeneral": 1.5,
-        "visitaFuera": 1.75
-      },
-      "cumple": {
-        "ganador60": false,
-        "ganadorSimple60": false,
-        "over15_60": false,
-        "over25_60": false,
-        "btts60": false,
-        "rachaGanadora": false
-      },
-      "destacado": false
-    },
-    {
-      "liga": "Bosnia and Herzegovina - Premier Liga",
-      "region": "Bosnia",
-      "ligaSlug": "bosnia",
       "equipoLocal": "Zeljeznicar",
       "equipoVisita": "Celik",
-      "horaInicio": "2026-09-19T01:00:00.000Z",
+      "horaInicio": "2026-09-18T19:00:00.000Z",
       "equipoFavorito": "Zeljeznicar",
       "probabilidades": {
         "ganadorLocal": 75,
@@ -729,49 +686,6 @@
       "cumple": {
         "ganador60": true,
         "ganadorSimple60": false,
-        "over15_60": false,
-        "over25_60": false,
-        "btts60": false,
-        "rachaGanadora": false
-      },
-      "destacado": true
-    },
-    {
-      "liga": "Bosnia and Herzegovina - Premier Liga",
-      "region": "Bosnia",
-      "ligaSlug": "bosnia",
-      "equipoLocal": "Zrinjski Mostar",
-      "equipoVisita": "Velez Mostar",
-      "horaInicio": "2026-09-19T01:00:00.000Z",
-      "equipoFavorito": "Zrinjski Mostar",
-      "probabilidades": {
-        "ganadorLocal": 100,
-        "empate": 0,
-        "ganadorVisita": 0,
-        "generalLocal": 71.4,
-        "generalEmpate": 7.1,
-        "generalVisita": 21.4,
-        "ganadorSimpleLocal": 85.7,
-        "ganadorSimpleVisita": 28.6,
-        "ganadorCasaLocal": 100,
-        "ganadorFueraVisita": 0,
-        "btts": 16.5,
-        "over15": 54,
-        "over25": 16.5
-      },
-      "rachas": {
-        "local": "-",
-        "visita": "-"
-      },
-      "ppg": {
-        "localGeneral": 2.57,
-        "localCasa": 3,
-        "visitaGeneral": 1,
-        "visitaFuera": 0
-      },
-      "cumple": {
-        "ganador60": true,
-        "ganadorSimple60": true,
         "over15_60": false,
         "over25_60": false,
         "btts60": false,
@@ -927,9 +841,9 @@
         "ganadorSimpleVisita": 66.7,
         "ganadorCasaLocal": 0,
         "ganadorFueraVisita": 25,
-        "btts": 12.5,
-        "over15": 25,
-        "over25": 0
+        "btts": null,
+        "over15": null,
+        "over25": null
       },
       "rachas": {
         "local": "-",
@@ -2174,9 +2088,9 @@
         "ganadorSimpleVisita": 16.7,
         "ganadorCasaLocal": 50,
         "ganadorFueraVisita": 0,
-        "btts": null,
-        "over15": null,
-        "over25": null
+        "btts": 0,
+        "over15": 0,
+        "over25": 0
       },
       "rachas": {
         "local": "-",
@@ -2217,9 +2131,9 @@
         "ganadorSimpleVisita": 0,
         "ganadorCasaLocal": 0,
         "ganadorFueraVisita": 0,
-        "btts": null,
-        "over15": null,
-        "over25": null
+        "btts": 12.5,
+        "over15": 37.5,
+        "over25": 12.5
       },
       "rachas": {
         "local": "-",
@@ -2260,9 +2174,9 @@
         "ganadorSimpleVisita": 33.3,
         "ganadorCasaLocal": 33.3,
         "ganadorFueraVisita": 0,
-        "btts": null,
-        "over15": null,
-        "over25": null
+        "btts": 16.5,
+        "over15": 16.5,
+        "over25": 16.5
       },
       "rachas": {
         "local": "-",
@@ -2303,9 +2217,9 @@
         "ganadorSimpleVisita": 33.3,
         "ganadorCasaLocal": 0,
         "ganadorFueraVisita": 0,
-        "btts": null,
-        "over15": null,
-        "over25": null
+        "btts": 41.5,
+        "over15": 41.5,
+        "over25": 16.5
       },
       "rachas": {
         "local": "-",
@@ -2346,9 +2260,9 @@
         "ganadorSimpleVisita": 50,
         "ganadorCasaLocal": 33.3,
         "ganadorFueraVisita": 66.7,
-        "btts": null,
-        "over15": null,
-        "over25": null
+        "btts": 33,
+        "over15": 50,
+        "over25": 16.5
       },
       "rachas": {
         "local": "-",
@@ -2389,9 +2303,9 @@
         "ganadorSimpleVisita": 33.3,
         "ganadorCasaLocal": 33.3,
         "ganadorFueraVisita": 33.3,
-        "btts": null,
-        "over15": null,
-        "over25": null
+        "btts": 33.5,
+        "over15": 33.5,
+        "over25": 33.5
       },
       "rachas": {
         "local": "-",
@@ -2809,29 +2723,29 @@
       "horaInicio": "2026-09-18T18:00:00.000Z",
       "equipoFavorito": "Aubstadt",
       "probabilidades": {
-        "ganadorLocal": 50,
-        "empate": 12.5,
-        "ganadorVisita": 37.5,
-        "generalLocal": 37.5,
-        "generalEmpate": 25,
-        "generalVisita": 37.5,
-        "ganadorSimpleLocal": 25,
-        "ganadorSimpleVisita": 25,
-        "ganadorCasaLocal": 40,
-        "ganadorFueraVisita": 33.3,
-        "btts": 0,
-        "over15": 16.5,
-        "over25": 0
+        "ganadorLocal": null,
+        "empate": null,
+        "ganadorVisita": null,
+        "generalLocal": null,
+        "generalEmpate": null,
+        "generalVisita": null,
+        "ganadorSimpleLocal": null,
+        "ganadorSimpleVisita": null,
+        "ganadorCasaLocal": null,
+        "ganadorFueraVisita": null,
+        "btts": null,
+        "over15": null,
+        "over25": null
       },
       "rachas": {
-        "local": "-",
-        "visita": "-"
+        "local": null,
+        "visita": null
       },
       "ppg": {
-        "localGeneral": 1,
-        "localCasa": 1.4,
-        "visitaGeneral": 1,
-        "visitaFuera": 1
+        "localGeneral": null,
+        "localCasa": null,
+        "visitaGeneral": null,
+        "visitaFuera": null
       },
       "cumple": {
         "ganador60": false,
@@ -2852,39 +2766,39 @@
       "horaInicio": "2026-09-18T18:00:00.000Z",
       "equipoFavorito": "Buchbach",
       "probabilidades": {
-        "ganadorLocal": 66.7,
-        "empate": 22.2,
-        "ganadorVisita": 11.1,
-        "generalLocal": 58.8,
-        "generalEmpate": 23.5,
-        "generalVisita": 17.6,
-        "ganadorSimpleLocal": 75,
-        "ganadorSimpleVisita": 33.3,
-        "ganadorCasaLocal": 75,
-        "ganadorFueraVisita": 20,
-        "btts": 20,
-        "over15": 42.5,
-        "over25": 10
+        "ganadorLocal": null,
+        "empate": null,
+        "ganadorVisita": null,
+        "generalLocal": null,
+        "generalEmpate": null,
+        "generalVisita": null,
+        "ganadorSimpleLocal": null,
+        "ganadorSimpleVisita": null,
+        "ganadorCasaLocal": null,
+        "ganadorFueraVisita": null,
+        "btts": null,
+        "over15": null,
+        "over25": null
       },
       "rachas": {
-        "local": "-",
-        "visita": "-"
+        "local": null,
+        "visita": null
       },
       "ppg": {
-        "localGeneral": 2.5,
-        "localCasa": 2.5,
-        "visitaGeneral": 1.22,
-        "visitaFuera": 0.8
+        "localGeneral": null,
+        "localCasa": null,
+        "visitaGeneral": null,
+        "visitaFuera": null
       },
       "cumple": {
-        "ganador60": true,
-        "ganadorSimple60": true,
+        "ganador60": false,
+        "ganadorSimple60": false,
         "over15_60": false,
         "over25_60": false,
         "btts60": false,
         "rachaGanadora": false
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "liga": "Germany - Bundesliga Women",
@@ -5596,307 +5510,6 @@
       "destacado": false
     },
     {
-      "liga": "Serbia - Super Liga",
-      "region": "Serbia",
-      "ligaSlug": "serbia",
-      "equipoLocal": "Macva Sabac",
-      "equipoVisita": "Mladost Lucani",
-      "horaInicio": "2026-09-19T01:00:00.000Z",
-      "equipoFavorito": "Macva Sabac",
-      "probabilidades": {
-        "ganadorLocal": 44.4,
-        "empate": 33.3,
-        "ganadorVisita": 22.2,
-        "generalLocal": 22.2,
-        "generalEmpate": 33.3,
-        "generalVisita": 44.4,
-        "ganadorSimpleLocal": 22.2,
-        "ganadorSimpleVisita": 33.3,
-        "ganadorCasaLocal": 50,
-        "ganadorFueraVisita": 20,
-        "btts": 0,
-        "over15": 20,
-        "over25": 20
-      },
-      "rachas": {
-        "local": "-",
-        "visita": "-"
-      },
-      "ppg": {
-        "localGeneral": 0.89,
-        "localCasa": 1.75,
-        "visitaGeneral": 1.44,
-        "visitaFuera": 1
-      },
-      "cumple": {
-        "ganador60": false,
-        "ganadorSimple60": false,
-        "over15_60": false,
-        "over25_60": false,
-        "btts60": false,
-        "rachaGanadora": false
-      },
-      "destacado": false
-    },
-    {
-      "liga": "Serbia - Super Liga",
-      "region": "Serbia",
-      "ligaSlug": "serbia",
-      "equipoLocal": "Novi Pazar",
-      "equipoVisita": "Zemun",
-      "horaInicio": "2026-09-19T01:00:00.000Z",
-      "equipoFavorito": "Novi Pazar",
-      "probabilidades": {
-        "ganadorLocal": 77.8,
-        "empate": 11.1,
-        "ganadorVisita": 11.1,
-        "generalLocal": 55.6,
-        "generalEmpate": 27.8,
-        "generalVisita": 16.7,
-        "ganadorSimpleLocal": 33.3,
-        "ganadorSimpleVisita": 0,
-        "ganadorCasaLocal": 60,
-        "ganadorFueraVisita": 0,
-        "btts": 25,
-        "over15": 37.5,
-        "over25": 0
-      },
-      "rachas": {
-        "local": "-",
-        "visita": "-"
-      },
-      "ppg": {
-        "localGeneral": 1.33,
-        "localCasa": 2,
-        "visitaGeneral": 0.22,
-        "visitaFuera": 0
-      },
-      "cumple": {
-        "ganador60": true,
-        "ganadorSimple60": false,
-        "over15_60": false,
-        "over25_60": false,
-        "btts60": false,
-        "rachaGanadora": false
-      },
-      "destacado": true
-    },
-    {
-      "liga": "Serbia - Super Liga",
-      "region": "Serbia",
-      "ligaSlug": "serbia",
-      "equipoLocal": "OFK Beograd",
-      "equipoVisita": "Radnicki 1923",
-      "horaInicio": "2026-09-19T01:00:00.000Z",
-      "equipoFavorito": "OFK Beograd",
-      "probabilidades": {
-        "ganadorLocal": 33.3,
-        "empate": 55.6,
-        "ganadorVisita": 11.1,
-        "generalLocal": 23.5,
-        "generalEmpate": 29.4,
-        "generalVisita": 47.1,
-        "ganadorSimpleLocal": 22.2,
-        "ganadorSimpleVisita": 50,
-        "ganadorCasaLocal": 25,
-        "ganadorFueraVisita": 20,
-        "btts": 10,
-        "over15": 20,
-        "over25": 20
-      },
-      "rachas": {
-        "local": "-",
-        "visita": "-"
-      },
-      "ppg": {
-        "localGeneral": 1,
-        "localCasa": 1.5,
-        "visitaGeneral": 1.75,
-        "visitaFuera": 1
-      },
-      "cumple": {
-        "ganador60": false,
-        "ganadorSimple60": false,
-        "over15_60": false,
-        "over25_60": false,
-        "btts60": false,
-        "rachaGanadora": false
-      },
-      "destacado": false
-    },
-    {
-      "liga": "Serbia - Super Liga",
-      "region": "Serbia",
-      "ligaSlug": "serbia",
-      "equipoLocal": "R. Surdulica",
-      "equipoVisita": "Partizan",
-      "horaInicio": "2026-09-19T01:00:00.000Z",
-      "equipoFavorito": "R. Surdulica",
-      "probabilidades": {
-        "ganadorLocal": 55.6,
-        "empate": 33.3,
-        "ganadorVisita": 11.1,
-        "generalLocal": 47.1,
-        "generalEmpate": 29.4,
-        "generalVisita": 23.5,
-        "ganadorSimpleLocal": 33.3,
-        "ganadorSimpleVisita": 25,
-        "ganadorCasaLocal": 60,
-        "ganadorFueraVisita": 25,
-        "btts": 12.5,
-        "over15": 25,
-        "over25": 12.5
-      },
-      "rachas": {
-        "local": "-",
-        "visita": "-"
-      },
-      "ppg": {
-        "localGeneral": 1.44,
-        "localCasa": 2.2,
-        "visitaGeneral": 0.88,
-        "visitaFuera": 1
-      },
-      "cumple": {
-        "ganador60": false,
-        "ganadorSimple60": false,
-        "over15_60": false,
-        "over25_60": false,
-        "btts60": false,
-        "rachaGanadora": false
-      },
-      "destacado": false
-    },
-    {
-      "liga": "Serbia - Super Liga",
-      "region": "Serbia",
-      "ligaSlug": "serbia",
-      "equipoLocal": "Red Star",
-      "equipoVisita": "Radnicki Nis",
-      "horaInicio": "2026-09-19T01:00:00.000Z",
-      "equipoFavorito": "Red Star",
-      "probabilidades": {
-        "ganadorLocal": 80,
-        "empate": 10,
-        "ganadorVisita": 10,
-        "generalLocal": 68.8,
-        "generalEmpate": 18.8,
-        "generalVisita": 12.5,
-        "ganadorSimpleLocal": 87.5,
-        "ganadorSimpleVisita": 25,
-        "ganadorCasaLocal": 100,
-        "ganadorFueraVisita": 20,
-        "btts": 10,
-        "over15": 10,
-        "over25": 0
-      },
-      "rachas": {
-        "local": "-",
-        "visita": "-"
-      },
-      "ppg": {
-        "localGeneral": 2.75,
-        "localCasa": 3,
-        "visitaGeneral": 1,
-        "visitaFuera": 0.8
-      },
-      "cumple": {
-        "ganador60": true,
-        "ganadorSimple60": true,
-        "over15_60": false,
-        "over25_60": false,
-        "btts60": false,
-        "rachaGanadora": false
-      },
-      "destacado": true
-    },
-    {
-      "liga": "Serbia - Super Liga",
-      "region": "Serbia",
-      "ligaSlug": "serbia",
-      "equipoLocal": "Vojvodina",
-      "equipoVisita": "IMT N. Beograd",
-      "horaInicio": "2026-09-19T01:00:00.000Z",
-      "equipoFavorito": "Vojvodina",
-      "probabilidades": {
-        "ganadorLocal": 70,
-        "empate": 10,
-        "ganadorVisita": 20,
-        "generalLocal": 55.6,
-        "generalEmpate": 11.1,
-        "generalVisita": 33.3,
-        "ganadorSimpleLocal": 77.8,
-        "ganadorSimpleVisita": 44.4,
-        "ganadorCasaLocal": 100,
-        "ganadorFueraVisita": 40,
-        "btts": 12.5,
-        "over15": 37.5,
-        "over25": 12.5
-      },
-      "rachas": {
-        "local": "-",
-        "visita": "-"
-      },
-      "ppg": {
-        "localGeneral": 2.33,
-        "localCasa": 3,
-        "visitaGeneral": 1.56,
-        "visitaFuera": 1.4
-      },
-      "cumple": {
-        "ganador60": true,
-        "ganadorSimple60": true,
-        "over15_60": false,
-        "over25_60": false,
-        "btts60": false,
-        "rachaGanadora": false
-      },
-      "destacado": true
-    },
-    {
-      "liga": "Serbia - Super Liga",
-      "region": "Serbia",
-      "ligaSlug": "serbia",
-      "equipoLocal": "Z. Pancevo",
-      "equipoVisita": "Cukaricki",
-      "horaInicio": "2026-09-19T01:00:00.000Z",
-      "equipoFavorito": "Z. Pancevo",
-      "probabilidades": {
-        "ganadorLocal": 62.5,
-        "empate": 25,
-        "ganadorVisita": 12.5,
-        "generalLocal": 43.8,
-        "generalEmpate": 25,
-        "generalVisita": 31.3,
-        "ganadorSimpleLocal": 42.9,
-        "ganadorSimpleVisita": 33.3,
-        "ganadorCasaLocal": 75,
-        "ganadorFueraVisita": 25,
-        "btts": 16.5,
-        "over15": 41.5,
-        "over25": 29
-      },
-      "rachas": {
-        "local": "-",
-        "visita": "-"
-      },
-      "ppg": {
-        "localGeneral": 1.57,
-        "localCasa": 2.5,
-        "visitaGeneral": 1.22,
-        "visitaFuera": 1
-      },
-      "cumple": {
-        "ganador60": true,
-        "ganadorSimple60": false,
-        "over15_60": false,
-        "over25_60": false,
-        "btts60": false,
-        "rachaGanadora": false
-      },
-      "destacado": true
-    },
-    {
       "liga": "Spain - LaLiga",
       "region": "Spain",
       "ligaSlug": "spain",
@@ -6335,29 +5948,29 @@
       "horaInicio": "2026-09-18T14:00:00.000Z",
       "equipoFavorito": "Bandirmaspor",
       "probabilidades": {
-        "ganadorLocal": null,
-        "empate": null,
-        "ganadorVisita": null,
-        "generalLocal": null,
-        "generalEmpate": null,
-        "generalVisita": null,
-        "ganadorSimpleLocal": null,
-        "ganadorSimpleVisita": null,
-        "ganadorCasaLocal": null,
-        "ganadorFueraVisita": null,
-        "btts": null,
-        "over15": null,
-        "over25": null
+        "ganadorLocal": 57.1,
+        "empate": 28.6,
+        "ganadorVisita": 14.3,
+        "generalLocal": 42.9,
+        "generalEmpate": 50,
+        "generalVisita": 7.1,
+        "ganadorSimpleLocal": 28.6,
+        "ganadorSimpleVisita": 0,
+        "ganadorCasaLocal": 50,
+        "ganadorFueraVisita": 0,
+        "btts": 33,
+        "over15": 33,
+        "over25": 16.5
       },
       "rachas": {
-        "local": null,
-        "visita": null
+        "local": "-",
+        "visita": "-"
       },
       "ppg": {
-        "localGeneral": null,
-        "localCasa": null,
-        "visitaGeneral": null,
-        "visitaFuera": null
+        "localGeneral": 1.43,
+        "localCasa": 1.75,
+        "visitaGeneral": 0.43,
+        "visitaFuera": 0.33
       },
       "cumple": {
         "ganador60": false,
@@ -6378,33 +5991,33 @@
       "horaInicio": "2026-09-18T18:00:00.000Z",
       "equipoFavorito": "Muglaspor",
       "probabilidades": {
-        "ganadorLocal": null,
-        "empate": null,
-        "ganadorVisita": null,
-        "generalLocal": null,
-        "generalEmpate": null,
-        "generalVisita": null,
-        "ganadorSimpleLocal": null,
-        "ganadorSimpleVisita": null,
-        "ganadorCasaLocal": null,
-        "ganadorFueraVisita": null,
-        "btts": null,
-        "over15": null,
-        "over25": null
+        "ganadorLocal": 33.3,
+        "empate": 33.3,
+        "ganadorVisita": 33.3,
+        "generalLocal": 28.6,
+        "generalEmpate": 28.6,
+        "generalVisita": 42.9,
+        "ganadorSimpleLocal": 28.6,
+        "ganadorSimpleVisita": 71.4,
+        "ganadorCasaLocal": 33.3,
+        "ganadorFueraVisita": 66.7,
+        "btts": 12.5,
+        "over15": 12.5,
+        "over25": 0
       },
       "rachas": {
-        "local": null,
-        "visita": null
+        "local": "-",
+        "visita": "-"
       },
       "ppg": {
-        "localGeneral": null,
-        "localCasa": null,
-        "visitaGeneral": null,
-        "visitaFuera": null
+        "localGeneral": 1.43,
+        "localCasa": 1.67,
+        "visitaGeneral": 2.14,
+        "visitaFuera": 2
       },
       "cumple": {
         "ganador60": false,
-        "ganadorSimple60": false,
+        "ganadorSimple60": true,
         "over15_60": false,
         "over25_60": false,
         "btts60": false,
