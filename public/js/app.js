@@ -150,13 +150,19 @@ function renderFilaPartido(p) {
           </tbody>
         </table>
       </div>
-      <div class="probabilidades">
-        ${renderProb(p.probabilidades.ganadorLocal, 'L 1X2', p.cumple.ganador60 && esLocalFavorito)}
-        ${renderProb(p.probabilidades.empate, 'Empate', false)}
-        ${renderProb(p.probabilidades.ganadorVisita, 'V 1X2', p.cumple.ganador60 && !esLocalFavorito)}
-        ${renderProb(p.probabilidades.btts, 'Ambos anotan', p.cumple.btts60)}
-        ${renderProb(p.probabilidades.over15, 'Más 1.5', p.cumple.over15_60)}
-        ${renderProb(p.probabilidades.over25, 'Más 2.5', p.cumple.over25_60)}
+            <div class="columna-probs">
+        <div class="probabilidades">
+          ${renderProb(p.probabilidades.btts, 'Ambos anotan', p.cumple.btts60)}
+          ${renderProb(p.probabilidades.over15, 'Más 1.5', p.cumple.over15_60)}
+          ${renderProb(p.probabilidades.over25, 'Más 2.5', p.cumple.over25_60)}
+          ${renderProb(p.probabilidades.over35, 'Más 3.5', false)}
+        </div>
+        <div class="etiqueta-grupo-probs">Primer tiempo</div>
+        <div class="probabilidades">
+          ${renderProb(p.probabilidades.over05HT, 'Más 0.5 (1T)', false)}
+          ${renderProb(p.probabilidades.over15HT, 'Más 1.5 (1T)', false)}
+          ${renderProb(p.probabilidades.over25HT, 'Más 2.5 (1T)', false)}
+        </div>
       </div>
     </article>
   `;
