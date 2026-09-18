@@ -193,7 +193,36 @@ function parsearOverUnder($) {
 
       equipos[normalizar(nombreEquipo)] = {
         nombreOriginal: nombreEquipo,
-        over15: num(t[4]), over25: num(t[5]), over35: num(t[6]), btts: num(t[9]),
+        over05: num(t[3]), over15: num(t[4]), over25: num(t[5]), over35: num(t[6]), btts: num(t[9]),
+      };
+    });
+  });
+  return equipos;
+}
+
+// ---------- 3b. Over/Under de PRIMER TIEMPO (halftime.asp) — mejor esfuerzo ----------
+// Usa la misma estructura de tabla que el over/under de partido completo,
+// pero buscada dentro de la página de medio tiempo. No pude confirmar en
+// vivo si esta página trae esta tabla exacta para todas las ligas — si sale
+// vacío, es la primera candidata a revisar contra el HTML real.
+function parsearOverUnderPrimerTiempo($) {
+  const equipos = {};
+  $('table').each((_, tabla) => {
+    const $tabla = $(tabla);
+    if (!$tabla.text().includes('BTS') || !$tabla.text().includes('2.5+')) return;
+    if (Object.keys(equipos).length > 0) return;
+
+    $tabla.find('tr').each((__, fila) => {
+      const celdas = $(fila).children('td');
+      if (celdas.length < 10) return;
+      const t = celdas.map((___, td) => $(td).text().trim()).get();
+      const nombreEquipo = t[0];
+      const gp = num(t[1]);
+      if (!nombreEquipo || !gp) return;
+
+      equipos[normalizar(nombreEquipo)] = {
+        nombreOriginal: nombreEquipo,
+        over05HT: num(t[3]), over15HT: num(t[4]), over25HT: num(t[5]),
       };
     });
   });
@@ -235,75 +264,33 @@ function parsearRachas($) {
 }
 
 // ---------- 6. Primer tiempo (halftime.asp) — mejor esfuerzo ----------
-function extraerSeccionPrimerTiempo(htmlCompleto) {
-  // La página table.asp?tid=c trae primero el over/under de partido
-  // completo, y más abajo una sección aparte "AT HALF-TIME" con el
-  // mismo formato de tabla pero para el primer tiempo.
-  const marcador = htmlCompleto.indexOf('AT HALF-TIME');
-  if (marcador === -1) return null;
-  return htmlCompleto.slice(marcador);
-}
-
-function parsearTablaOverUnderGenerica($) {
-  // Extrae la primera tabla "Total" (BTS + 2.5+) que encuentre en el
-  // documento que se le pase. Se reutiliza tanto para partido completo
-  // como para la sección de primer tiempo.
+function parsearPrimerTiempo($) {
   const equipos = {};
-  let encontrada = false;
   $('table').each((_, tabla) => {
-    if (encontrada) return;
     const $tabla = $(tabla);
-    if (!$tabla.text().includes('BTS') || !$tabla.text().includes('2.5+')) return;
-    let huboFilaValida = false;
+    const headerTexto = $tabla.text();
+    if (!headerTexto.includes('HT') && !headerTexto.toLowerCase().includes('half')) return;
+    if (Object.keys(equipos).length > 0) return;
+
     $tabla.find('tr').each((__, fila) => {
       const celdas = $(fila).children('td');
-      if (celdas.length < 10) return;
+      if (celdas.length < 6) return;
       const t = celdas.map((___, td) => $(td).text().trim()).get();
-      const nombreEquipo = t[0];
-      const gp = num(t[1]);
-      if (!nombreEquipo || !gp) return;
-      huboFilaValida = true;
+      const nombreEquipo = t[1];
+      const numeros = t.slice(2).map(num).filter((n) => n !== null);
+      if (!nombreEquipo || numeros.length < 3) return;
+
       equipos[normalizar(nombreEquipo)] = {
         nombreOriginal: nombreEquipo,
-        gp,
-        avg: num(t[2]),
-        over05: num(t[3]),
-        over15: num(t[4]),
-        over25: num(t[5]),
-        over35: num(t[6]),
-        over45: num(t[7]),
-        over55: num(t[8]),
-        btts: num(t[9]),
+        // Mejor esfuerzo: primeros números tras el nombre suelen ser GP/W/D/L del HT
+        htGolesFavorAprox: numeros[numeros.length - 2] ?? null,
+        htGolesContraAprox: numeros[numeros.length - 1] ?? null,
       };
     });
-    if (huboFilaValida) encontrada = true;
   });
   return equipos;
 }
 
-function parsearOverUnder($) {
-  return parsearTablaOverUnderGenerica($);
-}
-
-function parsearOverUnderPrimerTiempo(htmlOverUnderCompleto) {
-  // Recibe el HTML CRUDO (string) de table.asp?tid=c ya descargado para
-  // el over/under de partido completo, y saca de ahí mismo la sección
-  // "AT HALF-TIME" — no hace ninguna petición nueva.
-  const seccionHT = extraerSeccionPrimerTiempo(htmlOverUnderCompleto);
-  if (!seccionHT) return {};
-  const $ht = cheerio.load(seccionHT);
-  const datos = parsearTablaOverUnderGenerica($ht);
-  const equipos = {};
-  for (const clave in datos) {
-    equipos[clave] = {
-      nombreOriginal: datos[clave].nombreOriginal,
-      over05HT: datos[clave].over05,
-      over15HT: datos[clave].over15,
-      over25HT: datos[clave].over25,
-    };
-  }
-  return equipos;
-}
 // ---------- Próximos partidos (latest.asp) ----------
 // IMPORTANTE: en la sección "Statistics" de latest.asp, el equipo local y el
 // visitante quedan en FILAS SEPARADAS de la tabla (no en la misma fila), así
@@ -397,7 +384,14 @@ async function procesarLiga(liga) {
   const rachas = await fetchOpcional(`https://www.soccerstats.com/table.asp?league=${liga.slug}&tid=g`, parsearRachas, 'rachas');
 
   await esperar(PAUSA_MS);
-  const primerTiempo = await fetchOpcional(`https://www.soccerstats.com/halftime.asp?league=${liga.slug}`, parsearPrimerTiempo, 'primer tiempo');
+  let htmlHalftime = '';
+  try {
+    htmlHalftime = await obtenerHtml(`https://www.soccerstats.com/halftime.asp?league=${liga.slug}`);
+  } catch (e) {
+    console.warn(`  [primer tiempo] fallo: ${e.message}`);
+  }
+  const primerTiempo = htmlHalftime ? parsearPrimerTiempo(cheerio.load(htmlHalftime)) : {};
+  const overUnderHT = htmlHalftime ? parsearOverUnderPrimerTiempo(cheerio.load(htmlHalftime)) : {};
 
   const equipos = {};
   for (const clave of Object.keys(widetable)) {
@@ -406,6 +400,7 @@ async function procesarLiga(liga) {
       ...(overUnder[clave] || {}),
       ...(rachas[clave] || {}),
       ...(primerTiempo[clave] || {}),
+      ...(overUnderHT[clave] || {}),
     };
   }
 
