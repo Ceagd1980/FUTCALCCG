@@ -1,8 +1,8 @@
 {
-  "generadoEn": "2026-09-18T13:25:16.804Z",
+  "generadoEn": "2026-09-19T02:58:47.583Z",
   "fechaObjetivo": "2026-09-19",
-  "fuenteDatos": "2026-09-18T13:25:15.190Z",
-  "totalPartidos": 448,
+  "fuenteDatos": "2026-09-19T02:58:46.409Z",
+  "totalPartidos": 449,
   "destacados": 131,
   "partidos": [
     {
@@ -761,7 +761,7 @@
       },
       "rachas": {
         "local": "-",
-        "visita": "W5"
+        "visita": "W6"
       },
       "ppg": {
         "localGeneral": 1.17,
@@ -6302,9 +6302,9 @@
         "ganadorSimpleVisita": 33.3,
         "ganadorCasaLocal": 50,
         "ganadorFueraVisita": 66.7,
-        "btts": 16.5,
-        "over15": 29,
-        "over25": 0
+        "btts": null,
+        "over15": null,
+        "over25": null
       },
       "rachas": {
         "local": "-",
@@ -6345,9 +6345,9 @@
         "ganadorSimpleVisita": 66.7,
         "ganadorCasaLocal": 33.3,
         "ganadorFueraVisita": 50,
-        "btts": 25,
-        "over15": 25,
-        "over25": 25
+        "btts": null,
+        "over15": null,
+        "over25": null
       },
       "rachas": {
         "local": "-",
@@ -6388,9 +6388,9 @@
         "ganadorSimpleVisita": 50,
         "ganadorCasaLocal": 33.3,
         "ganadorFueraVisita": 66.7,
-        "btts": 0,
-        "over15": 33.5,
-        "over25": 0
+        "btts": null,
+        "over15": null,
+        "over25": null
       },
       "rachas": {
         "local": "-",
@@ -6431,9 +6431,9 @@
         "ganadorSimpleVisita": 16.7,
         "ganadorCasaLocal": 33.3,
         "ganadorFueraVisita": 0,
-        "btts": 0,
-        "over15": 16.5,
-        "over25": 0
+        "btts": null,
+        "over15": null,
+        "over25": null
       },
       "rachas": {
         "local": "-",
@@ -6474,9 +6474,9 @@
         "ganadorSimpleVisita": 16.7,
         "ganadorCasaLocal": 50,
         "ganadorFueraVisita": 0,
-        "btts": 12.5,
-        "over15": 29,
-        "over25": 16.5
+        "btts": null,
+        "over15": null,
+        "over25": null
       },
       "rachas": {
         "local": "-",
@@ -6517,9 +6517,9 @@
         "ganadorSimpleVisita": 16.7,
         "ganadorCasaLocal": 66.7,
         "ganadorFueraVisita": 0,
-        "btts": 0,
-        "over15": 41.5,
-        "over25": 0
+        "btts": null,
+        "over15": null,
+        "over25": null
       },
       "rachas": {
         "local": "-",
@@ -6560,9 +6560,9 @@
         "ganadorSimpleVisita": 16.7,
         "ganadorCasaLocal": 33.3,
         "ganadorFueraVisita": 0,
-        "btts": 0,
-        "over15": 16.5,
-        "over25": 0
+        "btts": null,
+        "over15": null,
+        "over25": null
       },
       "rachas": {
         "local": "-",
@@ -6603,9 +6603,9 @@
         "ganadorSimpleVisita": 33.3,
         "ganadorCasaLocal": 50,
         "ganadorFueraVisita": 0,
-        "btts": 25,
-        "over15": 54,
-        "over25": 12.5
+        "btts": null,
+        "over15": null,
+        "over25": null
       },
       "rachas": {
         "local": "-",
@@ -18441,6 +18441,49 @@
         "localCasa": 2,
         "visitaGeneral": 1.16,
         "visitaFuera": 0.82
+      },
+      "cumple": {
+        "ganador60": false,
+        "ganadorSimple60": false,
+        "over15_60": false,
+        "over25_60": false,
+        "btts60": false,
+        "rachaGanadora": false
+      },
+      "destacado": false
+    },
+    {
+      "liga": "USA - MLS",
+      "region": "USA",
+      "ligaSlug": "usa",
+      "equipoLocal": "Colorado Rapids",
+      "equipoVisita": "Seattle",
+      "horaInicio": "2026-09-20T02:30:00.000Z",
+      "equipoFavorito": "Colorado Rapids",
+      "probabilidades": {
+        "ganadorLocal": 58.3,
+        "empate": 16.7,
+        "ganadorVisita": 25,
+        "generalLocal": 41.7,
+        "generalEmpate": 18.8,
+        "generalVisita": 39.6,
+        "ganadorSimpleLocal": 44,
+        "ganadorSimpleVisita": 30.4,
+        "ganadorCasaLocal": 75,
+        "ganadorFueraVisita": 25,
+        "btts": 28,
+        "over15": 31.5,
+        "over25": 11.5
+      },
+      "rachas": {
+        "local": "-",
+        "visita": "-"
+      },
+      "ppg": {
+        "localGeneral": 1.4,
+        "localCasa": 2.25,
+        "visitaGeneral": 1.22,
+        "visitaFuera": 1.08
       },
       "cumple": {
         "ganador60": false,
